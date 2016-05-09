@@ -10,6 +10,18 @@
 		3D5D5E1B1CDD50220079F9ED /* AMYStoryDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E1A1CDD50220079F9ED /* AMYStoryDataStore.m */; };
 		3D5D5E211CDD50660079F9ED /* AMYDetailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E201CDD50660079F9ED /* AMYDetailManager.m */; };
 		3D5D5E241CDD50820079F9ED /* AMYMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E231CDD50820079F9ED /* AMYMainTableViewController.m */; };
+		3D5D5E3E1CE0B5F10079F9ED /* Choice+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E271CE0B5F10079F9ED /* Choice+CoreDataProperties.m */; };
+		3D5D5E3F1CE0B5F10079F9ED /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E291CE0B5F10079F9ED /* Choice.m */; };
+		3D5D5E401CE0B5F10079F9ED /* Character+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E2B1CE0B5F10079F9ED /* Character+CoreDataProperties.m */; };
+		3D5D5E411CE0B5F10079F9ED /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E2D1CE0B5F10079F9ED /* Character.m */; };
+		3D5D5E421CE0B5F10079F9ED /* Playthrough+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E2F1CE0B5F10079F9ED /* Playthrough+CoreDataProperties.m */; };
+		3D5D5E431CE0B5F10079F9ED /* Playthrough.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E311CE0B5F10079F9ED /* Playthrough.m */; };
+		3D5D5E441CE0B5F10079F9ED /* Question+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E331CE0B5F10079F9ED /* Question+CoreDataProperties.m */; };
+		3D5D5E451CE0B5F10079F9ED /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E351CE0B5F10079F9ED /* Question.m */; };
+		3D5D5E461CE0B5F10079F9ED /* Prerequisite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E371CE0B5F10079F9ED /* Prerequisite+CoreDataProperties.m */; };
+		3D5D5E471CE0B5F10079F9ED /* Prerequisite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E391CE0B5F10079F9ED /* Prerequisite.m */; };
+		3D5D5E481CE0B5F10079F9ED /* Effect+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E3B1CE0B5F10079F9ED /* Effect+CoreDataProperties.m */; };
+		3D5D5E491CE0B5F10079F9ED /* Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D5E3D1CE0B5F10079F9ED /* Effect.m */; };
 		3D8880F21CDD2FA800DA311A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8880F11CDD2FA800DA311A /* main.m */; };
 		3D8880F51CDD2FA800DA311A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8880F41CDD2FA800DA311A /* AppDelegate.m */; };
 		3D8880F81CDD2FA800DA311A /* TimeTrial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D8880F61CDD2FA800DA311A /* TimeTrial.xcdatamodeld */; };
@@ -44,6 +56,30 @@
 		3D5D5E201CDD50660079F9ED /* AMYDetailManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMYDetailManager.m; sourceTree = "<group>"; };
 		3D5D5E221CDD50820079F9ED /* AMYMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMYMainTableViewController.h; sourceTree = "<group>"; };
 		3D5D5E231CDD50820079F9ED /* AMYMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMYMainTableViewController.m; sourceTree = "<group>"; };
+		3D5D5E261CE0B5F10079F9ED /* Choice+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Choice+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3D5D5E271CE0B5F10079F9ED /* Choice+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Choice+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3D5D5E281CE0B5F10079F9ED /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
+		3D5D5E291CE0B5F10079F9ED /* Choice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Choice.m; sourceTree = "<group>"; };
+		3D5D5E2A1CE0B5F10079F9ED /* Character+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Character+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3D5D5E2B1CE0B5F10079F9ED /* Character+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Character+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3D5D5E2C1CE0B5F10079F9ED /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		3D5D5E2D1CE0B5F10079F9ED /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		3D5D5E2E1CE0B5F10079F9ED /* Playthrough+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Playthrough+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3D5D5E2F1CE0B5F10079F9ED /* Playthrough+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Playthrough+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3D5D5E301CE0B5F10079F9ED /* Playthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Playthrough.h; sourceTree = "<group>"; };
+		3D5D5E311CE0B5F10079F9ED /* Playthrough.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Playthrough.m; sourceTree = "<group>"; };
+		3D5D5E321CE0B5F10079F9ED /* Question+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Question+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3D5D5E331CE0B5F10079F9ED /* Question+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Question+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3D5D5E341CE0B5F10079F9ED /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		3D5D5E351CE0B5F10079F9ED /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		3D5D5E361CE0B5F10079F9ED /* Prerequisite+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Prerequisite+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3D5D5E371CE0B5F10079F9ED /* Prerequisite+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Prerequisite+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3D5D5E381CE0B5F10079F9ED /* Prerequisite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prerequisite.h; sourceTree = "<group>"; };
+		3D5D5E391CE0B5F10079F9ED /* Prerequisite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prerequisite.m; sourceTree = "<group>"; };
+		3D5D5E3A1CE0B5F10079F9ED /* Effect+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Effect+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3D5D5E3B1CE0B5F10079F9ED /* Effect+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Effect+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3D5D5E3C1CE0B5F10079F9ED /* Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Effect.h; sourceTree = "<group>"; };
+		3D5D5E3D1CE0B5F10079F9ED /* Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Effect.m; sourceTree = "<group>"; };
 		3D8880ED1CDD2FA800DA311A /* TimeTrial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTrial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8880F11CDD2FA800DA311A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D8880F31CDD2FA800DA311A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +122,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D5D5E251CE0B5D90079F9ED /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				3D5D5E261CE0B5F10079F9ED /* Choice+CoreDataProperties.h */,
+				3D5D5E271CE0B5F10079F9ED /* Choice+CoreDataProperties.m */,
+				3D5D5E281CE0B5F10079F9ED /* Choice.h */,
+				3D5D5E291CE0B5F10079F9ED /* Choice.m */,
+				3D5D5E2A1CE0B5F10079F9ED /* Character+CoreDataProperties.h */,
+				3D5D5E2B1CE0B5F10079F9ED /* Character+CoreDataProperties.m */,
+				3D5D5E2C1CE0B5F10079F9ED /* Character.h */,
+				3D5D5E2D1CE0B5F10079F9ED /* Character.m */,
+				3D5D5E2E1CE0B5F10079F9ED /* Playthrough+CoreDataProperties.h */,
+				3D5D5E2F1CE0B5F10079F9ED /* Playthrough+CoreDataProperties.m */,
+				3D5D5E301CE0B5F10079F9ED /* Playthrough.h */,
+				3D5D5E311CE0B5F10079F9ED /* Playthrough.m */,
+				3D5D5E321CE0B5F10079F9ED /* Question+CoreDataProperties.h */,
+				3D5D5E331CE0B5F10079F9ED /* Question+CoreDataProperties.m */,
+				3D5D5E341CE0B5F10079F9ED /* Question.h */,
+				3D5D5E351CE0B5F10079F9ED /* Question.m */,
+				3D5D5E361CE0B5F10079F9ED /* Prerequisite+CoreDataProperties.h */,
+				3D5D5E371CE0B5F10079F9ED /* Prerequisite+CoreDataProperties.m */,
+				3D5D5E381CE0B5F10079F9ED /* Prerequisite.h */,
+				3D5D5E391CE0B5F10079F9ED /* Prerequisite.m */,
+				3D5D5E3A1CE0B5F10079F9ED /* Effect+CoreDataProperties.h */,
+				3D5D5E3B1CE0B5F10079F9ED /* Effect+CoreDataProperties.m */,
+				3D5D5E3C1CE0B5F10079F9ED /* Effect.h */,
+				3D5D5E3D1CE0B5F10079F9ED /* Effect.m */,
+				3D8880F61CDD2FA800DA311A /* TimeTrial.xcdatamodeld */,
+			);
+			name = ManagedObjects;
+			sourceTree = "<group>";
+		};
 		3D8880E41CDD2FA800DA311A = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +189,7 @@
 				3D8881021CDD2FA800DA311A /* Assets.xcassets */,
 				3D8881041CDD2FA800DA311A /* LaunchScreen.storyboard */,
 				3D8881071CDD2FA800DA311A /* Info.plist */,
-				3D8880F61CDD2FA800DA311A /* TimeTrial.xcdatamodeld */,
+				3D5D5E251CE0B5D90079F9ED /* ManagedObjects */,
 				3D8880F01CDD2FA800DA311A /* Supporting Files */,
 			);
 			path = TimeTrial;
@@ -283,12 +351,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5D5E401CE0B5F10079F9ED /* Character+CoreDataProperties.m in Sources */,
+				3D5D5E411CE0B5F10079F9ED /* Character.m in Sources */,
+				3D5D5E3E1CE0B5F10079F9ED /* Choice+CoreDataProperties.m in Sources */,
 				3D8880F51CDD2FA800DA311A /* AppDelegate.m in Sources */,
 				3D5D5E211CDD50660079F9ED /* AMYDetailManager.m in Sources */,
+				3D5D5E481CE0B5F10079F9ED /* Effect+CoreDataProperties.m in Sources */,
+				3D5D5E491CE0B5F10079F9ED /* Effect.m in Sources */,
+				3D5D5E421CE0B5F10079F9ED /* Playthrough+CoreDataProperties.m in Sources */,
 				3D5D5E1B1CDD50220079F9ED /* AMYStoryDataStore.m in Sources */,
 				3D8880F81CDD2FA800DA311A /* TimeTrial.xcdatamodeld in Sources */,
+				3D5D5E441CE0B5F10079F9ED /* Question+CoreDataProperties.m in Sources */,
 				3D5D5E241CDD50820079F9ED /* AMYMainTableViewController.m in Sources */,
+				3D5D5E3F1CE0B5F10079F9ED /* Choice.m in Sources */,
+				3D5D5E471CE0B5F10079F9ED /* Prerequisite.m in Sources */,
+				3D5D5E451CE0B5F10079F9ED /* Question.m in Sources */,
 				3D8880F21CDD2FA800DA311A /* main.m in Sources */,
+				3D5D5E461CE0B5F10079F9ED /* Prerequisite+CoreDataProperties.m in Sources */,
+				3D5D5E431CE0B5F10079F9ED /* Playthrough.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
