@@ -253,7 +253,7 @@
 }
 
 /*
- First things first: add CHCSVParser to podfile (pod init, pod install) and .gitignore
+ First things first: add .gitignore
  Second: run to make sure it all works
  Third: check against Woods Story to make sure I'm not leaving out anything crucial, then copy all this code into a single master file (txt is fine) for future--bare bones code
  Fourth: import csv

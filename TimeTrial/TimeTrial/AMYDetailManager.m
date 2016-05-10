@@ -35,13 +35,13 @@
     
     //this handles all effects from selected choice or currentQuestion
     
-    NSString *actionObject = thing.actionObject;
+    NSString *objectAffected = thing.objectAffected;
     
-    if ([actionObject isEqualToString:@"story"])
+    if ([objectAffected isEqualToString:@"story"])
     {
         [self managePlaythrough:thing];
     }
-    else if ([actionObject isEqualToString:@"character"])
+    else if ([objectAffected isEqualToString:@"character"])
     {
         [self manageCharacter:thing];
     }
@@ -71,73 +71,8 @@
 
 - (void)boolEffectPlaythroughHandler:(Effect *)effect
 {
-    NSString *actionProperty = effect.actionProperty;
-    BOOL boolValue = effect.stringValue.boolValue;
-    
-    if ([actionProperty isEqualToString:@"fontChange"])
-    {
-        self.dataStore.playthrough.fontChange = boolValue;
-    }
-    else if ([actionProperty isEqualToString:@"creativityChosen"])
-    {
-        self.dataStore.playthrough.creativityChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"intelligenceChosen"])
-    {
-        self.dataStore.playthrough.intelligenceChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"obedienceChosen"])
-    {
-        self.dataStore.playthrough.obedienceChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"empathyChosen"])
-    {
-        self.dataStore.playthrough.empathyChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"instinctChosen"])
-    {
-        self.dataStore.playthrough.instinctChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"perseveranceChosen"])
-    {
-        self.dataStore.playthrough.perseveranceChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"kindnessChosen"])
-    {
-        self.dataStore.playthrough.kindnessChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"strengthChosen"])
-    {
-        self.dataStore.playthrough.strengthChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"graceChosen"])
-    {
-        self.dataStore.playthrough.graceChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"intellectChosen"])
-    {
-        self.dataStore.playthrough.intellectChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"imaginationChosen"])
-    {
-        self.dataStore.playthrough.imaginationChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"caringChosen"])
-    {
-        self.dataStore.playthrough.caringChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"wondermentChosen"])
-    {
-        self.dataStore.playthrough.wondermentChosen = YES;
-    }
-    else if ([actionProperty isEqualToString:@"curiosityChosen"])
-    {
-        self.dataStore.playthrough.curiosityChosen = YES;
-    }
-    else
-    {
-        NSLog(@"***ERROR: Action property %@ does not match anything", actionProperty);
-    }
+//    NSString *propertyAffected = effect.propertyAffected;
+//    BOOL boolValue = effect.stringValue.boolValue;
 }
 
 - (void)stringEffectPlaythroughHandler:(Effect *)effect
@@ -185,73 +120,14 @@
 
 - (void)stringEffectCharacterHandler:(Effect *)effect
 {
-    NSString *actionProperty = effect.actionProperty;
+//    NSString *propertyAffected = effect.propertyAffected;
     //    NSString *stringValue = effect.stringValue;
-    
-    if ([actionProperty isEqualToString:@"stateOfAcceptance"])
-    {
-        NSInteger majorValue = self.dataStore.playerCharacter.chosenMajorValue;
-        
-        if (majorValue > 15)
-        {
-            self.dataStore.playerCharacter.stateOfAcceptance = @"Exceptional Acceptance";
-        }
-        else if (majorValue > 12)
-        {
-            self.dataStore.playerCharacter.stateOfAcceptance = @"Regular Acceptance";
-        }
-        else if (majorValue >= 10)
-        {
-            self.dataStore.playerCharacter.stateOfAcceptance = @"Barely Accepted";
-        }
-        else if (majorValue < 7)
-        {
-            self.dataStore.playerCharacter.stateOfAcceptance = @"Regular Rejection";
-        }
-        else
-        {
-            self.dataStore.playerCharacter.stateOfAcceptance = @"Barely Rejected";
-        }
-    }
 }
 
 - (void)integerEffectCharacterHandler:(Effect *)effect
 {
-    NSString *actionProperty = effect.actionProperty;
-    NSInteger integerValue = effect.stringValue.integerValue;
-    
-    if ([actionProperty isEqualToString:@"charm"])
-    {
-        self.dataStore.playerCharacter.charm += integerValue;
-    }
-    else if ([actionProperty isEqualToString:@"practical"])
-    {
-        self.dataStore.playerCharacter.practical += integerValue;
-    }
-    else if ([actionProperty isEqualToString:@"history"])
-    {
-        self.dataStore.playerCharacter.history += integerValue;
-    }
-    else if ([actionProperty isEqualToString:@"potions"])
-    {
-        self.dataStore.playerCharacter.potions += integerValue;
-    }
-    else if ([actionProperty isEqualToString:@"healing"])
-    {
-        self.dataStore.playerCharacter.healing += integerValue;
-    }
-    else if ([actionProperty isEqualToString:@"divining"])
-    {
-        self.dataStore.playerCharacter.divining += integerValue;
-    }
-    else if ([actionProperty isEqualToString:@"animalia"])
-    {
-        self.dataStore.playerCharacter.animalia += integerValue;
-    }
-    else
-    {
-        NSLog(@"***ERROR: ACTION PROPERTY %@ DOES NOT MATCH ATTRIBUTE", actionProperty);
-    }
+//    NSString *propertyAffected = effect.propertyAffected;
+//    NSInteger integerValue = effect.stringValue.integerValue;
 }
 
 #pragma Checking Prerequisites
@@ -260,14 +136,14 @@
 {
     [self fetchDataStoreData];
     
-    NSString *checkObject = prerequisite.checkObject;
+    NSString *objectChecked = prerequisite.objectChecked;
     BOOL passesCheck;
     
-    if ([checkObject isEqualToString:@"story"])
+    if ([objectChecked isEqualToString:@"story"])
     {
         passesCheck = [self checkPlaythroughPrerequisite:prerequisite];
     }
-    else if ([checkObject isEqualToString:@"character"])
+    else if ([objectChecked isEqualToString:@"character"])
     {
         passesCheck = [self checkCharacterPrerequisite:prerequisite];
     }
@@ -302,180 +178,10 @@
 
 - (BOOL)checkPlaythroughBOOLPrerequisite:(Prerequisite *)prerequisite
 {
-    NSString *checkProperty = prerequisite.checkProperty;
-    BOOL boolValue = prerequisite.stringValue.boolValue;
+//    NSString *propertyChecked = prerequisite.propertyChecked;
+//    BOOL boolValue = prerequisite.stringValue.boolValue;
     BOOL passesCheck;
     
-    
-    if ([checkProperty isEqualToString:@"creativityChosen"])
-    {
-        BOOL creativityChosen = self.dataStore.playthrough.creativityChosen;
-        
-        if (boolValue == creativityChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"intelligenceChosen"])
-    {
-        BOOL intelligenceChosen = self.dataStore.playthrough.intelligenceChosen;
-        if (boolValue == intelligenceChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"obedienceChosen"])
-    {
-        BOOL obedienceChosen = self.dataStore.playthrough.obedienceChosen;
-        if (boolValue == obedienceChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"empathyChosen"])
-    {
-        BOOL empathyChosen = self.dataStore.playthrough.empathyChosen;
-        if (boolValue == empathyChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"instinctChosen"])
-    {
-        BOOL instinctChosen = self.dataStore.playthrough.instinctChosen;
-        if (boolValue == instinctChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"perseveranceChosen"])
-    {
-        BOOL perseveranceChosen = self.dataStore.playthrough.perseveranceChosen;
-        if (boolValue == perseveranceChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"kindnessChosen"])
-    {
-        BOOL kindnessChosen = self.dataStore.playthrough.kindnessChosen;
-        if (boolValue == kindnessChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"strengthChosen"])
-    {
-        BOOL strengthChosen = self.dataStore.playthrough.strengthChosen;
-        if (boolValue == strengthChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"graceChosen"])
-    {
-        BOOL graceChosen = self.dataStore.playthrough.graceChosen;
-        if (boolValue == graceChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"intellectChosen"])
-    {
-        BOOL intellectChosen = self.dataStore.playthrough.intellectChosen;
-        if (boolValue == intellectChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"imaginationChosen"])
-    {
-        BOOL imaginationChosen = self.dataStore.playthrough.imaginationChosen;
-        if (boolValue == imaginationChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"caringChosen"])
-    {
-        BOOL caringChosen = self.dataStore.playthrough.caringChosen;
-        if (boolValue == caringChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"wondermentChosen"])
-    {
-        BOOL wondermentChosen = self.dataStore.playthrough.wondermentChosen;
-        if (boolValue == wondermentChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
-    else if ([checkProperty isEqualToString:@"curiosityChosen"])
-    {
-        BOOL curiosityChosen = self.dataStore.playthrough.curiosityChosen;
-        if (boolValue == curiosityChosen)
-        {
-            passesCheck = NO;
-        }
-        else
-        {
-            passesCheck = YES;
-        }
-    }
     return passesCheck;
 }
 
@@ -528,17 +234,8 @@
 {
     BOOL passesCheck = NO;
     
-    NSString *checkProperty = prerequisite.checkProperty;
-    NSString *stringValue = prerequisite.stringValue;
-    
-    if ([checkProperty isEqualToString:@"stateOfAcceptance"])
-    {
-        //        NSLog(@"state of acceptance: %@", stringValue);
-        if ([stringValue isEqualToString:self.dataStore.playerCharacter.stateOfAcceptance])
-        {
-            passesCheck = YES;
-        }
-    }
+//    NSString *propertyChecked = prerequisite.propertyChecked;
+//    NSString *stringValue = prerequisite.stringValue;
     
     return passesCheck;
 }
@@ -555,15 +252,13 @@
 {
     [self fetchDataStoreData];
     
-    if ([content containsString:@"#highestMajorColor"])
+    if ([content containsString:@"#hour"])
     {
-        //        NSLog(@"major color: %@", self.dataStore.playerCharacter.chosenMajorColor);
-        content = [content stringByReplacingOccurrencesOfString:@"#highestMajorColor" withString:self.dataStore.playerCharacter.chosenMajorColor];
+        //fill in with property hour
     }
-    if ([content containsString:@"#highestMajor"])
+    if ([content containsString:@"#day"])
     {
-        //        NSLog(@"highest major: %@", self.dataStore.playerCharacter.chosenMajor);
-        content = [content stringByReplacingOccurrencesOfString:@"#highestMajor" withString:self.dataStore.playerCharacter.chosenMajor.capitalizedString];
+        //fill in with property day
     }
     
     return content;

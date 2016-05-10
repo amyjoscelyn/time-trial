@@ -50,25 +50,25 @@
 
 - (void)fetchData
 {
-    NSFetchRequest *prerequisiteRequest = [NSFetchRequest fetchRequestWithEntityName:@"Prerequisite"];
-    prerequisiteRequest.sortDescriptors = @[self.sortByStoryIDAsc];
+//    NSFetchRequest *prerequisiteRequest = [NSFetchRequest fetchRequestWithEntityName:@"Prerequisite"];
+//    prerequisiteRequest.sortDescriptors = @[self.sortByStoryIDAsc];
+//    
+//    self.prerequisites = [self.managedObjectContext executeFetchRequest:prerequisiteRequest error:nil];
+//    
+//    if (self.prerequisites.count == 0)
+//    {
+//        [self generatePrerequisites];
+//    }
     
-    self.prerequisites = [self.managedObjectContext executeFetchRequest:prerequisiteRequest error:nil];
-    
-    if (self.prerequisites.count == 0)
-    {
-        [self generatePrerequisites];
-    }
-    
-    NSFetchRequest *effectRequest = [NSFetchRequest fetchRequestWithEntityName:@"Effect"];
-    effectRequest.sortDescriptors = @[self.sortByStoryIDAsc];
-    
-    self.effects = [self.managedObjectContext executeFetchRequest:effectRequest error:nil];
-    
-    if (self.effects.count == 0)
-    {
-        [self generateEffects];
-    }
+//    NSFetchRequest *effectRequest = [NSFetchRequest fetchRequestWithEntityName:@"Effect"];
+//    effectRequest.sortDescriptors = @[self.sortByStoryIDAsc];
+//    
+//    self.effects = [self.managedObjectContext executeFetchRequest:effectRequest error:nil];
+//    
+//    if (self.effects.count == 0)
+//    {
+//        [self generateEffects];
+//    }
     
     NSFetchRequest *choiceRequest = [NSFetchRequest fetchRequestWithEntityName:@"Choice"];
     choiceRequest.sortDescriptors = @[self.sortByStoryIDAsc];
@@ -365,7 +365,7 @@
     {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"DreamGame" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"TimeTrial" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
