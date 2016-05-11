@@ -33,6 +33,8 @@
     
     [self.dataStore fetchData];
     
+    [self.detailManager resetAttributes];
+    
     [self setCurrentQuestionOfStory:self.dataStore.playthrough.currentQuestion];
     
     self.selectedRow = 10;
@@ -47,6 +49,7 @@
     
     _dataStore.playthrough.currentQuestion = currentQuestion;
     
+    NSLog(@"current question: %@", currentQuestion.content);
     [_dataStore saveContext];
     
     [self generateChoicesArrayForCurrentQuestion:currentQuestion];
@@ -56,15 +59,17 @@
 {
     self.choicesArray = [[NSMutableArray alloc] init];
     
+//    NSLog(@"number of choices: %lu", self.sortedChoices.count);
+    
     if (self.sortedChoices.count > 0)
     {
-        NSString *choiceStoryID = @"";
+//        NSString *choiceStoryID = @"";
         for (Choice *choice in currentQuestion.choiceOuts)
         {
-            if ([choice.storyID isEqualToString:choiceStoryID])
-            {
+//            if ([choice.storyID isEqualToString:choiceStoryID])
+//            {
                 [self.choicesArray addObject:choice];
-            }
+//            }
         }
     }
     else
@@ -158,6 +163,7 @@
     }
     else if (section == 1)
     {
+//        NSLog(@"choices: %lu", self.choicesArray.count);
         if (self.choicesArray.count > 0)
         {
             Choice *choice = self.choicesArray[row];
@@ -253,11 +259,7 @@
 }
 
 /*
- First things first: add .gitignore
- Second: run to make sure it all works
- Third: check against Woods Story to make sure I'm not leaving out anything crucial, then copy all this code into a single master file (txt is fine) for future--bare bones code
- Fourth: import csv
- Fifth: run to make sure it all works
+ add .gitignore
  */
 
 @end

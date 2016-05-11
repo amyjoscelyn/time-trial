@@ -254,11 +254,16 @@
     
     if ([content containsString:@"#hour"])
     {
-        //fill in with property hour
+        NSNumber *hour = self.dataStore.playthrough.hour;
+        NSString *hourString = hour.stringValue;
+        content = [content stringByReplacingOccurrencesOfString:@"#hour" withString:hourString];
+        NSLog(@"Replaced Content: %@", content);
     }
     if ([content containsString:@"#day"])
     {
-        //fill in with property day
+        NSNumber *day = self.dataStore.playthrough.day;
+        NSString *dayString = day.stringValue;
+        content = [content stringByReplacingOccurrencesOfString:@"#day" withString:dayString];
     }
     
     return content;
@@ -268,6 +273,8 @@
 {
     [self fetchDataStoreData];
     
+    self.dataStore.playthrough.day = @0;
+    self.dataStore.playthrough.hour = @0;
     //restore all properties to original new-game-state here
 }
 

@@ -50,25 +50,25 @@
 
 - (void)fetchData
 {
-//    NSFetchRequest *prerequisiteRequest = [NSFetchRequest fetchRequestWithEntityName:@"Prerequisite"];
-//    prerequisiteRequest.sortDescriptors = @[self.sortByStoryIDAsc];
-//    
-//    self.prerequisites = [self.managedObjectContext executeFetchRequest:prerequisiteRequest error:nil];
-//    
-//    if (self.prerequisites.count == 0)
-//    {
-//        [self generatePrerequisites];
-//    }
+    //    NSFetchRequest *prerequisiteRequest = [NSFetchRequest fetchRequestWithEntityName:@"Prerequisite"];
+    //    prerequisiteRequest.sortDescriptors = @[self.sortByStoryIDAsc];
+    //
+    //    self.prerequisites = [self.managedObjectContext executeFetchRequest:prerequisiteRequest error:nil];
+    //
+    //    if (self.prerequisites.count == 0)
+    //    {
+    //        [self generatePrerequisites];
+    //    }
     
-//    NSFetchRequest *effectRequest = [NSFetchRequest fetchRequestWithEntityName:@"Effect"];
-//    effectRequest.sortDescriptors = @[self.sortByStoryIDAsc];
-//    
-//    self.effects = [self.managedObjectContext executeFetchRequest:effectRequest error:nil];
-//    
-//    if (self.effects.count == 0)
-//    {
-//        [self generateEffects];
-//    }
+    //    NSFetchRequest *effectRequest = [NSFetchRequest fetchRequestWithEntityName:@"Effect"];
+    //    effectRequest.sortDescriptors = @[self.sortByStoryIDAsc];
+    //
+    //    self.effects = [self.managedObjectContext executeFetchRequest:effectRequest error:nil];
+    //
+    //    if (self.effects.count == 0)
+    //    {
+    //        [self generateEffects];
+    //    }
     
     NSFetchRequest *choiceRequest = [NSFetchRequest fetchRequestWithEntityName:@"Choice"];
     choiceRequest.sortDescriptors = @[self.sortByStoryIDAsc];
@@ -217,6 +217,7 @@
 {
     //this parses through the given csv--Question
     
+//    NSLog(@"generating questions!!!!!");
     NSArray *questionRows = [self parsedCSVContentsWithFileName:@"Question-Table 1"];
     
     NSMutableArray *allQuestions = [NSMutableArray new];
@@ -256,7 +257,7 @@
             {
                 if ([choiceOut.storyID isEqualToString:choiceOutStoryID])
                 {
-                    //                    NSLog(@"Add choice %@", choiceOut.storyID);
+//                    NSLog(@"Add choice %@", choiceOut.storyID);
                     [newQuestion addChoiceOutsObject:choiceOut];
                 }
             }
@@ -287,14 +288,14 @@
         NSPredicate *thisChoicePredicate = [NSPredicate predicateWithFormat:@"storyID == %@", choiceRowStoryID];
         Choice *thisChoice = [self.choices filteredArrayUsingPredicate:thisChoicePredicate][0];
         
-        //        NSLog(@"CHOICE MATCH: %@ vs %@", choiceRowStoryID, thisChoice.storyID);
+//        NSLog(@"CHOICE MATCH: %@ vs %@", choiceRowStoryID, thisChoice.storyID);
         
         NSString *questionOutStoryID = choiceRow[5];
         for (Question *question in allQuestions)
         {
             if ([question.storyID isEqualToString:questionOutStoryID])
             {
-                //                NSLog(@"QUESTION AFTER %@ is %@", thisChoice, question);
+//                NSLog(@"QUESTION AFTER %@ is %@", thisChoice, question);
                 thisChoice.questionOut = question;
             }
         }
