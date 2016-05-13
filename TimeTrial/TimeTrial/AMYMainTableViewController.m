@@ -66,6 +66,8 @@
 //        NSString *choiceStoryID = @"";
         for (Choice *choice in currentQuestion.choiceOuts)
         {
+            NSLog(@"Choice = %@", choice);
+            NSLog(@"choice.effects: %@", choice.effects);
 //            if ([choice.storyID isEqualToString:choiceStoryID])
 //            {
                 [self.choicesArray addObject:choice];
@@ -227,6 +229,8 @@
     else if (self.choicesArray.count > 0)
     {
         Choice *selectedChoice = self.choicesArray[row];
+        NSLog(@"self.choicesArray.count = %li", self.choicesArray.count);
+        NSLog(@"selectedChoice.effects.count = %li", selectedChoice.effects.count);
         
         if (selectedChoice.effects.count)
         {

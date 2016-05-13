@@ -1,0 +1,3 @@
+storyID,comment,choices,questions,effects,objectChecked,propertyChecked,comparator,stringValue
+newDay,It’s been over 24 hours.,,q002,,playthrough,newDay,BOOL,YES
+sameDay,It hasn’t been 24 hours yet.,,q001,,playthrough,sameDay,BOOL,YES

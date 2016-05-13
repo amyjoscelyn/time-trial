@@ -1,0 +1,7 @@
+storyID,comment,choices,questions,prerequisites,objectAffected,propertyAffected,operator,stringValue
+oneHour,1,c001,,,playthrough,time,integer,1
+twoHours,2,c002,,,playthrough,time,integer,2
+threeHours,3,c003,,,playthrough,time,integer,3
+sixHours,6,c004,,,playthrough,time,integer,6
+twelveHours,12,c005,,,playthrough,time,integer,12
+twentyFourHours,24,c006,,,playthrough,time,integer,24

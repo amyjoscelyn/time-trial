@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int64_t day;
 @property (nonatomic) int64_t hour;
 @property (nonatomic) BOOL newDay;
+@property (nonatomic) BOOL sameDay;
 @property (nullable, nonatomic, retain) Question *currentQuestion;
 @property (nullable, nonatomic, retain) Character *playerCharacter;
 

@@ -1,0 +1,6 @@
+storyID,comment,prerequisites,effects,questionBefores,questionAfter,choiceIns,choiceOuts,content
+BEGIN,beginning,,,—,q001,,,You are in a room.
+q001,basic question,sameDay,,BEGIN,,,"c001, c002, c003, c004, c005, c006, c010",It’s #hour:00.
+q002,new day question,newDay,,,,,"c001, c002, c003, c004, c005, c006","It's now #hour:00, on day #day."
+q010,display day,,,,,c010,"c001, c002, c003, c004, c005, c006",It's day #day at #hour:00.
+END,"week’s passed, ending",,,,—,,,A week has passed.

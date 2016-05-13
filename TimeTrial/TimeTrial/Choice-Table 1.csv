@@ -1,0 +1,8 @@
+storyID,comment,questionIns,prerequisites,effects,questionOut,content
+c001,,,,,,Wait one hour.
+c002,,,,,,Wait two hours.
+c003,,,,,,Wait three hours.
+c004,,,,,,Wait six hours.
+c005,,,,,,Wait twelve hours.
+c006,,,,,,Wait twenty-four hours.
+c010,,,,,q010,What day is it?

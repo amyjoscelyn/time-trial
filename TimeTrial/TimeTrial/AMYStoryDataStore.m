@@ -50,25 +50,25 @@
 
 - (void)fetchData
 {
-    //    NSFetchRequest *prerequisiteRequest = [NSFetchRequest fetchRequestWithEntityName:@"Prerequisite"];
-    //    prerequisiteRequest.sortDescriptors = @[self.sortByStoryIDAsc];
-    //
-    //    self.prerequisites = [self.managedObjectContext executeFetchRequest:prerequisiteRequest error:nil];
-    //
-    //    if (self.prerequisites.count == 0)
-    //    {
-    //        [self generatePrerequisites];
-    //    }
+        NSFetchRequest *prerequisiteRequest = [NSFetchRequest fetchRequestWithEntityName:@"Prerequisite"];
+        prerequisiteRequest.sortDescriptors = @[self.sortByStoryIDAsc];
     
-    //    NSFetchRequest *effectRequest = [NSFetchRequest fetchRequestWithEntityName:@"Effect"];
-    //    effectRequest.sortDescriptors = @[self.sortByStoryIDAsc];
-    //
-    //    self.effects = [self.managedObjectContext executeFetchRequest:effectRequest error:nil];
-    //
-    //    if (self.effects.count == 0)
-    //    {
-    //        [self generateEffects];
-    //    }
+        self.prerequisites = [self.managedObjectContext executeFetchRequest:prerequisiteRequest error:nil];
+    
+        if (self.prerequisites.count == 0)
+        {
+            [self generatePrerequisites];
+        }
+    
+        NSFetchRequest *effectRequest = [NSFetchRequest fetchRequestWithEntityName:@"Effect"];
+        effectRequest.sortDescriptors = @[self.sortByStoryIDAsc];
+    
+        self.effects = [self.managedObjectContext executeFetchRequest:effectRequest error:nil];
+    
+        if (self.effects.count == 0)
+        {
+            [self generateEffects];
+        }
     
     NSFetchRequest *choiceRequest = [NSFetchRequest fetchRequestWithEntityName:@"Choice"];
     choiceRequest.sortDescriptors = @[self.sortByStoryIDAsc];
@@ -202,8 +202,8 @@
             {
                 if ([effect.storyID isEqualToString:effectStoryID])
                 {
-                    //                    NSLog(@"Add effect %@", effect.storyID);
-                    //                    NSLog(@"EFFECT MATCH: %@ vs %@", effectStoryID, effect.storyID);
+                                        NSLog(@"Add effect %@", effect.storyID);
+                                        NSLog(@"EFFECT MATCH: %@ vs %@", effectStoryID, effect.storyID);
                     [newChoice addEffectsObject:effect];
                 }
             }

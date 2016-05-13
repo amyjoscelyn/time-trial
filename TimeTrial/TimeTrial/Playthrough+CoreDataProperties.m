@@ -16,6 +16,7 @@
 @dynamic day;
 @dynamic hour;
 @dynamic newDay;
+@dynamic sameDay;
 @dynamic currentQuestion;
 @dynamic playerCharacter;
 

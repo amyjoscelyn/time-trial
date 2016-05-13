@@ -277,6 +277,8 @@
     
     self.dataStore.playthrough.day = 0;
     self.dataStore.playthrough.hour = 0;
+    self.dataStore.playthrough.newDay = NO;
+    self.dataStore.playthrough.sameDay = YES;
     //restore all properties to original new-game-state here
 }
 

@@ -27,6 +27,7 @@
         <attribute name="day" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="hour" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="newDay" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sameDay" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="currentQuestion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="playthrough" inverseEntity="Question" syncable="YES"/>
         <relationship name="playerCharacter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Character" inverseName="playthrough" inverseEntity="Character" syncable="YES"/>
     </entity>
@@ -58,7 +59,7 @@
         <element name="Character" positionX="-99" positionY="18" width="128" height="58"/>
         <element name="Choice" positionX="421" positionY="81" width="128" height="148"/>
         <element name="Effect" positionX="241" positionY="270" width="128" height="178"/>
-        <element name="Playthrough" positionX="-270" positionY="128" width="128" height="118"/>
+        <element name="Playthrough" positionX="-270" positionY="128" width="128" height="133"/>
         <element name="Prerequisite" positionX="232" positionY="-72" width="128" height="178"/>
         <element name="Question" positionX="25" positionY="108" width="128" height="193"/>
     </elements>

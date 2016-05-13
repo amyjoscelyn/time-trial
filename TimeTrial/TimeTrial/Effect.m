@@ -26,7 +26,7 @@
     effect.operator = csvRow[7];
     effect.stringValue = csvRow[8];
     
-    //    NSLog(@"Effect: %@", effect);
+        NSLog(@"Effect: %@", effect);
     return effect;
 }
 
