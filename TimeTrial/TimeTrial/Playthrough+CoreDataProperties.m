@@ -2,7 +2,7 @@
 //  Playthrough+CoreDataProperties.m
 //  TimeTrial
 //
-//  Created by Amy Joscelyn on 5/11/16.
+//  Created by Amy Joscelyn on 5/13/16.
 //  Copyright © 2016 Amy Joscelyn. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,6 +15,7 @@
 
 @dynamic day;
 @dynamic hour;
+@dynamic newDay;
 @dynamic currentQuestion;
 @dynamic playerCharacter;
 

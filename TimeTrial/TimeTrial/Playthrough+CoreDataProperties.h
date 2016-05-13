@@ -2,7 +2,7 @@
 //  Playthrough+CoreDataProperties.h
 //  TimeTrial
 //
-//  Created by Amy Joscelyn on 5/11/16.
+//  Created by Amy Joscelyn on 5/13/16.
 //  Copyright © 2016 Amy Joscelyn. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,8 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Playthrough (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSNumber *day;
-@property (nullable, nonatomic, retain) NSNumber *hour;
+@property (nonatomic) int64_t day;
+@property (nonatomic) int64_t hour;
+@property (nonatomic) BOOL newDay;
 @property (nullable, nonatomic, retain) Question *currentQuestion;
 @property (nullable, nonatomic, retain) Character *playerCharacter;
 
