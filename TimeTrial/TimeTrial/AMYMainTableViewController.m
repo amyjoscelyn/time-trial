@@ -59,19 +59,24 @@
 {
     self.choicesArray = [[NSMutableArray alloc] init];
     
-//    NSLog(@"number of choices: %lu", self.sortedChoices.count);
+    //    NSLog(@"number of choices: %lu", self.sortedChoices.count);
     
-    if (self.sortedChoices.count > 0)
+    //so what seems to be happening is the Choices for the first question are getting stored, but incompletely?  For when one is chosen, it fails to load a new question, and everything becomes nil, causing a crash.  Why would this happen, unless the original choices fail to store as complete objects?
+    
+    if (self.sortedChoices.count)
     {
-//        NSString *choiceStoryID = @"";
+        //        NSString *choiceStoryID = @"";
         for (Choice *choice in currentQuestion.choiceOuts)
         {
             NSLog(@"Choice = %@", choice);
             NSLog(@"choice.effects: %@", choice.effects);
-//            if ([choice.storyID isEqualToString:choiceStoryID])
-//            {
-                [self.choicesArray addObject:choice];
-//            }
+            
+            [self.choicesArray addObject:choice];
+
+            //            if ([choice.storyID isEqualToString:choiceStoryID])
+            //            {
+            //                [self.choicesArray addObject:choice];
+            //            }
         }
     }
     else
@@ -165,7 +170,7 @@
     }
     else if (section == 1)
     {
-//        NSLog(@"choices: %lu", self.choicesArray.count);
+        //        NSLog(@"choices: %lu", self.choicesArray.count);
         if (self.choicesArray.count > 0)
         {
             Choice *choice = self.choicesArray[row];
